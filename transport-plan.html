@@ -1,0 +1,189 @@
+<title>תוכנית הובלות 22–23.9</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#9E2222; --red-dark:#7E1A1A; --red-soft:#FBEFEF;
+  --ink:#1c1c1e; --mut:#6b6560; --line:#ddd6d0; --row:#faf7f5;
+  --bg:#f2efec; --card:#ffffff;
+  --amber:#8a5a00; --amber-bg:#fdf3dd; --blue:#1f4e79; --blue-bg:#e9f0f7;
+}
+body{background:var(--bg);color:var(--ink);font-family:'Noto Sans Hebrew','Segoe UI',Arial,sans-serif;direction:rtl;margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 40px}
+header.top{display:flex;align-items:flex-start;gap:14px;margin-bottom:6px}
+.numbox{background:var(--red);color:#fff;font-weight:900;font-size:30px;line-height:1;padding:14px 18px;flex:0 0 auto}
+h1{margin:0;font-size:34px;font-weight:900;letter-spacing:-.5px;text-wrap:balance}
+.sub{color:var(--mut);font-size:15px;font-weight:600;margin-top:4px}
+.stats{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 26px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:8px 14px;font-size:13px;font-weight:600}
+.stat b{font-weight:900;font-size:16px;margin-inline-start:4px}
+.stat.red{background:var(--red-soft);border-color:#e3bcbc;color:var(--red-dark)}
+
+section{margin-bottom:30px}
+.day{display:flex;align-items:baseline;gap:10px;border-bottom:3px solid var(--red);padding-bottom:6px;margin-bottom:14px}
+.day h2{margin:0;font-size:21px;font-weight:900;color:var(--red-dark)}
+.day .note{color:var(--mut);font-size:13px;font-weight:600}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:760px){.cols{grid-template-columns:1fr}}
+
+.tblwrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:var(--card);font-size:14px}
+caption{caption-side:top;text-align:right;background:var(--red);color:#fff;font-weight:800;font-size:14px;padding:8px 12px}
+caption .tag{float:left;font-weight:600;font-size:12px;opacity:.85}
+th{background:var(--red-dark);color:#fff;font-weight:700;font-size:12.5px;padding:6px 12px;text-align:right}
+td{border:1px solid var(--line);padding:6px 12px}
+tbody tr:nth-child(even){background:var(--row)}
+td.tz{font-variant-numeric:tabular-nums;font-weight:800;font-size:15px;white-space:nowrap;direction:ltr;text-align:right}
+td.note{color:var(--mut);font-size:12.5px}
+.warn{color:var(--amber);background:var(--amber-bg);border-radius:4px;padding:1px 8px;font-size:12px;font-weight:700;white-space:nowrap}
+.unk{color:var(--blue);background:var(--blue-bg);border-radius:4px;padding:1px 8px;font-size:12px;font-weight:700;white-space:nowrap}
+
+.plates{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+@media(max-width:1000px){.plates{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:640px){.plates{grid-template-columns:repeat(2,1fr)}}
+.plate{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.plate h3{margin:0;background:var(--red);color:#fff;font-size:13px;font-weight:800;padding:6px 12px}
+.plate .veh{padding:7px 12px;display:flex;flex-direction:column;gap:1px}
+.plate .veh + .veh{border-top:1px dashed var(--line)}
+.plate .veh .z{font-weight:900;font-size:16px;font-variant-numeric:tabular-nums;direction:ltr;text-align:right}
+.plate .veh .t{font-size:12px;color:var(--mut);font-weight:600}
+.plate .veh .t .unk{padding:0 6px}
+.hint{color:var(--mut);font-size:12.5px;margin-top:10px}
+
+.remaining .cols3{columns:3;column-gap:18px}
+@media(max-width:900px){.remaining .cols3{columns:2}}
+@media(max-width:560px){.remaining .cols3{columns:1}}
+.rem{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:6px 12px;margin-bottom:8px;break-inside:avoid;display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13.5px}
+.rem .z{font-weight:800;font-variant-numeric:tabular-nums;direction:ltr}
+.rem .w{font-size:11.5px}
+
+footer{border-top:1px solid var(--line);margin-top:34px;padding-top:10px;color:var(--mut);font-size:12.5px;font-weight:600;display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="numbox">3</div>
+  <div>
+    <h1>תוכנית הובלות — ירידה מתע"מ</h1>
+    <div class="sub">עדכון להובלות · ימים שלישי–רביעי 22–23.9</div>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="stat red">סה"כ בתוכנית <b>26</b></div>
+  <div class="stat">יום ג' 22.9 · בהובלה <b>2</b></div>
+  <div class="stat">יום ג' 22.9 · בנסיעה <b>4</b></div>
+  <div class="stat">יום ד' 23.9 · ע"ג פלטות <b>20</b></div>
+  <div class="stat">פלטות נדרשות <b>10</b></div>
+  <div class="stat">נותרים ללא שיבוץ <b>23</b></div>
+</div>
+
+<section>
+  <div class="day"><h2>יום שלישי 22.9</h2><div class="note">2 האמרים בהובלה + 4 כלים יורדים בנסיעה עצמית</div></div>
+  <div class="cols">
+    <div class="tblwrap">
+      <table>
+        <caption>הובלה — 2 האמרים <span class="tag">נקודת איסוף: משטח שטיפה</span></caption>
+        <thead><tr><th>סוג רכב</th><th>צ'</th><th>הערות</th></tr></thead>
+        <tbody>
+          <tr><td>האמר</td><td class="tz">702401</td><td class="note">במשטח שטיפה · <span class="unk">לא ברשימת העוצמה</span></td></tr>
+          <tr><td>האמר חט"פ</td><td class="tz">702039</td><td class="note">במשטח שטיפה</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tblwrap">
+      <table>
+        <caption>ירידה בנסיעה עצמית — 4 כלים</caption>
+        <thead><tr><th>סוג רכב</th><th>צ'</th><th>הערות</th></tr></thead>
+        <tbody>
+          <tr><td>FMTV ארוכה</td><td class="tz">727491</td><td class="note"></td></tr>
+          <tr><td>FMTV ארוכה</td><td class="tz">727496</td><td class="note"></td></tr>
+          <tr><td>FMTV</td><td class="tz">990129</td><td class="note"></td></tr>
+          <tr><td>FMTV</td><td class="tz">990009</td><td class="note"></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="day"><h2>יום רביעי 23.9</h2><div class="note">20 כלים ע"ג 10 פלטות · 2 כלים לפלטה</div></div>
+  <div class="plates">
+    <div class="plate"><h3>פלטה 1</h3>
+      <div class="veh"><span class="z">702140</span><span class="t">האמר גנרי</span></div>
+      <div class="veh"><span class="z">705472</span><span class="t"><span class="unk">לא ברשימת העוצמה</span></span></div>
+    </div>
+    <div class="plate"><h3>פלטה 2</h3>
+      <div class="veh"><span class="z">702692</span><span class="t">האמר גנרי</span></div>
+      <div class="veh"><span class="z">705636</span><span class="t">האמר סגן</span></div>
+    </div>
+    <div class="plate"><h3>פלטה 3</h3>
+      <div class="veh"><span class="z">702924</span><span class="t">האמר גנרי</span></div>
+      <div class="veh"><span class="z">700702</span><span class="t">האמר גפן</span></div>
+    </div>
+    <div class="plate"><h3>פלטה 4</h3>
+      <div class="veh"><span class="z">702285</span><span class="t">האמר גפן</span></div>
+      <div class="veh"><span class="z">703360</span><span class="t">האמר 11 א'</span></div>
+    </div>
+    <div class="plate"><h3>פלטה 5</h3>
+      <div class="veh"><span class="z">702764</span><span class="t">האמר חנית (עוקץ)</span></div>
+      <div class="veh"><span class="z">700646</span><span class="t">האמר חנית</span></div>
+    </div>
+    <div class="plate"><h3>פלטה 6</h3>
+      <div class="veh"><span class="z">703746</span><span class="t"><span class="unk">לא ברשימת העוצמה</span></span></div>
+      <div class="veh"><span class="z">705584</span><span class="t"><span class="unk">לא ברשימת העוצמה</span></span></div>
+    </div>
+    <div class="plate"><h3>פלטה 7</h3>
+      <div class="veh"><span class="z">705407</span><span class="t">האמר מנהלה — מסייעת</span></div>
+      <div class="veh"><span class="z">706272</span><span class="t">האמר מנהלה — פלס"מ</span></div>
+    </div>
+    <div class="plate"><h3>פלטה 8</h3>
+      <div class="veh"><span class="z">705655</span><span class="t">האמר מנהלה — ב</span></div>
+      <div class="veh"><span class="z">702177</span><span class="t">האמר 13 א'</span></div>
+    </div>
+    <div class="plate"><h3>פלטה 9</h3>
+      <div class="veh"><span class="z">702256</span><span class="t"><span class="unk">לא ברשימת העוצמה</span></span></div>
+      <div class="veh"><span class="z">705337</span><span class="t">האמר מפקד</span></div>
+    </div>
+    <div class="plate"><h3>פלטה 10</h3>
+      <div class="veh"><span class="z">705897</span><span class="t">האמר מנהלה — ג</span></div>
+      <div class="veh"><span class="z">702189</span><span class="t">האמר 10 א'</span></div>
+    </div>
+  </div>
+  <div class="hint">השיבוץ לפלטות הוא לפי סדר הרשימה שהועברה — ניתן להחליף בין זוגות לפי שיקול קצין ההובלות.</div>
+</section>
+
+<section class="remaining">
+  <div class="day"><h2>נותרים בגדוד — טרם שובצו להובלה</h2><div class="note">23 כלים מתוך 44 שברשימת העוצמה</div></div>
+  <div class="cols3">
+    <div class="rem"><span>FMTV</span><span class="z">990069</span></div>
+    <div class="rem"><span>FMTV</span><span class="z">990053</span></div>
+    <div class="rem"><span>FMTV</span><span class="z">990068</span></div>
+    <div class="rem"><span>FMTV</span><span class="z">990278</span></div>
+    <div class="rem"><span>אושקוש סולר</span><span class="z">708749</span><span class="warn w">לא תקין · חצרות יסף</span></div>
+    <div class="rem"><span>האמר מנהלה — א</span><span class="z">706616</span></div>
+    <div class="rem"><span>האמר מנהלה</span><span class="z">705630</span></div>
+    <div class="rem"><span>האמר כתקל</span><span class="z">705077</span></div>
+    <div class="rem"><span>האמר 15 א'</span><span class="z">702939</span></div>
+    <div class="rem"><span>האמר 15 א'</span><span class="z">702030</span></div>
+    <div class="rem"><span>האמר רק"ש</span><span class="z">706666</span></div>
+    <div class="rem"><span>האמרבולנס</span><span class="z">703521</span></div>
+    <div class="rem"><span>האמר גנרי</span><span class="z">702415</span><span class="warn w">בסדנה בציפורית</span></div>
+    <div class="rem"><span>האמר גנרי</span><span class="z">702896</span></div>
+    <div class="rem"><span>האמר גנרי</span><span class="z">702379</span></div>
+    <div class="rem"><span>האמר גנרי</span><span class="z">700692</span></div>
+    <div class="rem"><span>האמר גנרי</span><span class="z">ללא צ'</span></div>
+    <div class="rem"><span>סב"ח</span><span class="z">311368</span></div>
+    <div class="rem"><span>סב"ח</span><span class="z">311370</span></div>
+    <div class="rem"><span>סב"ח</span><span class="z">311367</span></div>
+    <div class="rem"><span>סב"ח</span><span class="z">311339</span></div>
+    <div class="rem"><span>האמר חנית (עוקץ)</span><span class="z">702649</span></div>
+    <div class="rem"><span>האמר חנית</span><span class="z">703025</span></div>
+  </div>
+</section>
+
+<footer>
+  <span>גדוד 28 | תוכנית ירידה מתע"מ לבנון</span>
+  <span>בלמ"ס</span>
+</footer>
+</div>
