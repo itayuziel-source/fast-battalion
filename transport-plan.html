@@ -38,18 +38,6 @@ td.note{color:var(--mut);font-size:12.5px}
 .warn{color:var(--amber);background:var(--amber-bg);border-radius:4px;padding:1px 8px;font-size:12px;font-weight:700;white-space:nowrap}
 .unk{color:var(--blue);background:var(--blue-bg);border-radius:4px;padding:1px 8px;font-size:12px;font-weight:700;white-space:nowrap}
 
-.plates{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-@media(max-width:1000px){.plates{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:640px){.plates{grid-template-columns:repeat(2,1fr)}}
-.plate{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.plate h3{margin:0;background:var(--red);color:#fff;font-size:13px;font-weight:800;padding:6px 12px}
-.plate .veh{padding:7px 12px;display:flex;flex-direction:column;gap:1px}
-.plate .veh + .veh{border-top:1px dashed var(--line)}
-.plate .veh .z{font-weight:900;font-size:16px;font-variant-numeric:tabular-nums;direction:ltr;text-align:right}
-.plate .veh .t{font-size:12px;color:var(--mut);font-weight:600}
-.plate .veh .t .unk{padding:0 6px}
-.hint{color:var(--mut);font-size:12.5px;margin-top:10px}
-
 .remaining .cols3{columns:3;column-gap:18px}
 @media(max-width:900px){.remaining .cols3{columns:2}}
 @media(max-width:560px){.remaining .cols3{columns:1}}
@@ -107,50 +95,45 @@ footer{border-top:1px solid var(--line);margin-top:34px;padding-top:10px;color:v
 </section>
 
 <section>
-  <div class="day"><h2>יום רביעי 23.9</h2><div class="note">20 כלים ע"ג 10 פלטות · 2 כלים לפלטה</div></div>
-  <div class="plates">
-    <div class="plate"><h3>פלטה 1</h3>
-      <div class="veh"><span class="z">702140</span><span class="t">האמר גנרי</span></div>
-      <div class="veh"><span class="z">705472</span><span class="t"><span class="unk">לא ברשימת העוצמה</span></span></div>
+  <div class="day"><h2>יום רביעי 23.9</h2><div class="note">20 כלים ע"ג 10 פלטות</div></div>
+  <div class="cols">
+    <div class="tblwrap">
+      <table>
+        <caption>כלים 1–10</caption>
+        <thead><tr><th>סוג רכב</th><th>צ'</th><th>הערות</th></tr></thead>
+        <tbody>
+          <tr><td>האמר גנרי</td><td class="tz">702140</td><td class="note"></td></tr>
+          <tr><td>האמר</td><td class="tz">705472</td><td class="note"><span class="unk">לא ברשימת העוצמה</span></td></tr>
+          <tr><td>האמר גנרי</td><td class="tz">702692</td><td class="note"></td></tr>
+          <tr><td>האמר סגן</td><td class="tz">705636</td><td class="note"></td></tr>
+          <tr><td>האמר גנרי</td><td class="tz">702924</td><td class="note"></td></tr>
+          <tr><td>האמר גפן</td><td class="tz">700702</td><td class="note"></td></tr>
+          <tr><td>האמר גפן</td><td class="tz">702285</td><td class="note"></td></tr>
+          <tr><td>האמר 11 א'</td><td class="tz">703360</td><td class="note"></td></tr>
+          <tr><td>האמר חנית (עוקץ)</td><td class="tz">702764</td><td class="note"></td></tr>
+          <tr><td>האמר חנית</td><td class="tz">700646</td><td class="note"></td></tr>
+        </tbody>
+      </table>
     </div>
-    <div class="plate"><h3>פלטה 2</h3>
-      <div class="veh"><span class="z">702692</span><span class="t">האמר גנרי</span></div>
-      <div class="veh"><span class="z">705636</span><span class="t">האמר סגן</span></div>
-    </div>
-    <div class="plate"><h3>פלטה 3</h3>
-      <div class="veh"><span class="z">702924</span><span class="t">האמר גנרי</span></div>
-      <div class="veh"><span class="z">700702</span><span class="t">האמר גפן</span></div>
-    </div>
-    <div class="plate"><h3>פלטה 4</h3>
-      <div class="veh"><span class="z">702285</span><span class="t">האמר גפן</span></div>
-      <div class="veh"><span class="z">703360</span><span class="t">האמר 11 א'</span></div>
-    </div>
-    <div class="plate"><h3>פלטה 5</h3>
-      <div class="veh"><span class="z">702764</span><span class="t">האמר חנית (עוקץ)</span></div>
-      <div class="veh"><span class="z">700646</span><span class="t">האמר חנית</span></div>
-    </div>
-    <div class="plate"><h3>פלטה 6</h3>
-      <div class="veh"><span class="z">703746</span><span class="t"><span class="unk">לא ברשימת העוצמה</span></span></div>
-      <div class="veh"><span class="z">705584</span><span class="t"><span class="unk">לא ברשימת העוצמה</span></span></div>
-    </div>
-    <div class="plate"><h3>פלטה 7</h3>
-      <div class="veh"><span class="z">705407</span><span class="t">האמר מנהלה — מסייעת</span></div>
-      <div class="veh"><span class="z">706272</span><span class="t">האמר מנהלה — פלס"מ</span></div>
-    </div>
-    <div class="plate"><h3>פלטה 8</h3>
-      <div class="veh"><span class="z">705655</span><span class="t">האמר מנהלה — ב</span></div>
-      <div class="veh"><span class="z">702177</span><span class="t">האמר 13 א'</span></div>
-    </div>
-    <div class="plate"><h3>פלטה 9</h3>
-      <div class="veh"><span class="z">702256</span><span class="t"><span class="unk">לא ברשימת העוצמה</span></span></div>
-      <div class="veh"><span class="z">705337</span><span class="t">האמר מפקד</span></div>
-    </div>
-    <div class="plate"><h3>פלטה 10</h3>
-      <div class="veh"><span class="z">705897</span><span class="t">האמר מנהלה — ג</span></div>
-      <div class="veh"><span class="z">702189</span><span class="t">האמר 10 א'</span></div>
+    <div class="tblwrap">
+      <table>
+        <caption>כלים 11–20</caption>
+        <thead><tr><th>סוג רכב</th><th>צ'</th><th>הערות</th></tr></thead>
+        <tbody>
+          <tr><td>האמר</td><td class="tz">703746</td><td class="note"><span class="unk">לא ברשימת העוצמה</span></td></tr>
+          <tr><td>האמר</td><td class="tz">705584</td><td class="note"><span class="unk">לא ברשימת העוצמה</span></td></tr>
+          <tr><td>האמר מנהלה — מסייעת</td><td class="tz">705407</td><td class="note"></td></tr>
+          <tr><td>האמר מנהלה — פלס"מ</td><td class="tz">706272</td><td class="note"></td></tr>
+          <tr><td>האמר מנהלה — ב</td><td class="tz">705655</td><td class="note"></td></tr>
+          <tr><td>האמר 13 א'</td><td class="tz">702177</td><td class="note"></td></tr>
+          <tr><td>האמר</td><td class="tz">702256</td><td class="note"><span class="unk">לא ברשימת העוצמה</span></td></tr>
+          <tr><td>האמר מפקד</td><td class="tz">705337</td><td class="note"></td></tr>
+          <tr><td>האמר מנהלה — ג</td><td class="tz">705897</td><td class="note"></td></tr>
+          <tr><td>האמר 10 א'</td><td class="tz">702189</td><td class="note"></td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
-  <div class="hint">השיבוץ לפלטות הוא לפי סדר הרשימה שהועברה — ניתן להחליף בין זוגות לפי שיקול קצין ההובלות.</div>
 </section>
 
 <section class="remaining">
